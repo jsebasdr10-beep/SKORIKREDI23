@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IA, Finanzas y Estrategia | Score Credy</title>
+<meta name="theme-color" content="#0877d1">
+<style>
+:root{--blue:#0877d1;--navy:#062b5b;--yellow:#ffd600;--muted:#66758a;--line:#dbe9f6;--bg:#f8fbff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--navy);background:#fff}
+.container{width:min(1080px,92vw);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navbar{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{width:160px;display:block}
+.menu{display:flex;align-items:center;gap:20px;font-size:13px;font-weight:800}
+.menu a{text-decoration:none;color:var(--navy)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:13px 20px;font-weight:900;border:1px solid transparent}
+.btn-yellow{background:var(--yellow);color:var(--navy);box-shadow:0 8px 22px rgba(255,214,0,.22)}
+.btn-outline{border-color:#b8d8f3;color:var(--blue);background:#fff}
+.hero{padding:46px 0 26px;background:linear-gradient(180deg,#f7fbff 0,#fff 100%)}
+.hero-box{text-align:center;max-width:850px;margin:auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+h1{font-size:clamp(40px,6vw,72px);line-height:.98;letter-spacing:-.05em;margin:0 auto 16px;max-width:850px}
+h1 span{color:var(--blue)}
+.sub{font-size:18px;line-height:1.6;color:var(--muted);max-width:720px;margin:0 auto}
+.meta{margin:22px auto 0;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.pill{padding:9px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;font-weight:800;background:#fff}
+.actions{margin:22px 0 0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.banner{margin:30px auto 0;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 40px rgba(6,43,91,.10)}
+.banner img{display:block;width:100%;height:auto}
+section{padding:62px 0}
+.section-title{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em;line-height:1.05;margin:0 0 12px}
+.section-copy{color:var(--muted);line-height:1.7;margin:0;max-width:760px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.card{border:1px solid var(--line);border-radius:22px;padding:22px;background:#fff}
+.card b{display:block;font-size:18px;margin-bottom:7px}
+.card p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}
+.speakers{background:var(--bg)}
+.accordion{display:grid;gap:12px;margin-top:26px}
+details{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;gap:14px}
+summary::-webkit-details-marker{display:none}
+.avatar{width:58px;height:58px;border-radius:16px;object-fit:cover;flex:none;box-shadow:0 6px 18px rgba(6,43,91,.10)}
+.person{flex:1}
+.person b{display:block;font-size:18px}
+.person span{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.plus{font-size:24px;color:var(--blue);transition:.2s}
+details[open] .plus{transform:rotate(45deg)}
+.bio{padding:0 18px 18px 90px;color:var(--muted);line-height:1.7;font-size:15px}
+.bio strong{color:var(--navy)}
+.register{padding-top:30px}
+.regbox{background:var(--navy);border-radius:28px;padding:18px;box-shadow:0 22px 55px rgba(6,43,91,.18)}
+.reghead{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 14px 20px;color:#fff}
+.reghead h2{margin:0 0 6px;font-size:34px;letter-spacing:-.03em}
+.reghead p{margin:0;color:#cae4ff}
+.frame{height:820px;background:#fff;border-radius:20px;overflow:hidden}
+iframe{width:100%;height:100%;border:0}
+footer{padding:34px 0 50px;text-align:center;color:var(--muted);font-size:13px}
+footer img{width:150px;margin-bottom:10px}
+.floating{position:fixed;right:18px;bottom:18px;z-index:25}
+@media(max-width:760px){
+  .menu a:not(.btn){display:none}
+  .hero{padding-top:34px}
+  .cards{grid-template-columns:1fr}
+  .reghead{display:block}
+  .reghead .btn{margin-top:14px}
+  .bio{padding:0 16px 18px}
+  .frame{height:980px}
+  .floating{left:16px;right:16px}
+  .floating .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container navbar">
+    <img class="logo" src="assets/logo-score-credy.png" alt="Score Credy">
+    <div class="menu">
+      <a href="#temas">Temas</a>
+      <a href="#facilitadores">Facilitadores</a>
+      <a class="btn btn-yellow" href="https://forms.gle/cP5a7XXPwa6Ktq9cA" target="_blank" rel="noopener">Reservar cupo ↗</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-box">
+      <div class="eyebrow">Charla empresarial · Score Credy</div>
+      <h1>IA, Finanzas y Estrategia:<br><span>El Nuevo Juego Empresarial</span></h1>
+      <p class="sub">Claves prácticas para empresarios y emprendedores que quieren usar mejor la tecnología, entender sus números y tomar decisiones con más estrategia en 2026.</p>
+      <div class="meta">
+        <div class="pill">21 de octubre de 2026</div>
+        <div class="pill">7:00 p. m.</div>
+        <div class="pill">Casa de la Cultura · La Vega</div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-yellow" href="#registro">Inscribirme</a>
+        <a class="btn btn-outline" href="#facilitadores">Ver facilitadores</a>
+      </div>
+    </div>
+    <div class="banner"><img src="assets/evento-banner.png" alt="Banner del evento"></div>
+  </div>
+</header>
+
+<section id="temas">
+  <div class="container">
+    <h2 class="section-title">Una conversación. Tres ejes.</h2>
+    <p class="section-copy">Sin llenar la página de teoría: iremos directo a lo que puede ayudarte a pensar mejor tu negocio.</p>
+    <div class="cards">
+      <div class="card"><b>IA aplicada</b><p>Cómo integrar herramientas de inteligencia artificial en procesos reales y no quedarse solo en “probar IA”.</p></div>
+      <div class="card"><b>Finanzas</b><p>Cómo leer mejor costos, rentabilidad, control y decisiones financieras para proteger el negocio.</p></div>
+      <div class="card"><b>Estrategia</b><p>Cómo conectar tecnología, clientes y números para tomar decisiones de crecimiento con mayor criterio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="speakers" id="facilitadores">
+  <div class="container">
+    <h2 class="section-title">Facilitadores</h2>
+    <p class="section-copy">Toca cada perfil para ver su trayectoria.</p>
+    <div class="accordion">
+      <details>
+        <summary>
+          <img class="avatar" src="assets/dolores-betancourt.png" alt="Dolores Betancourt">
+          <div class="person"><b>Dolores Betancourt</b><span>Mercadeo · estrategia · desarrollo empresarial · IA aplicada</span></div>
+          <div class="plus">+</div>
+        </summary>
+        <div class="bio"><strong>Perfil:</strong> Licenciada en Mercadeo por UAPA, con formación en gestión competitiva de pequeñas empresas, alta gerencia, fidelización de clientes, marketing digital y emprendimiento. Su preparación reciente incluye inteligencia artificial y aprendizaje automático, modo agente, herramientas multimodales y NotebookLM. Su trayectoria combina ventas, gerencia, capacitación, turismo y bienes raíces.</div>
+      </details>
+
+      <details>
+        <summary>
+          <img class="avatar" src="assets/joel-ceballo.png" alt="Joel Ceballo">
+          <div class="person"><b>Joel Alfredo Ceballo Ariza</b><span>Finanzas · tributación · docencia · transformación digital</span></div>
+          <div class="plus">+</div>
+        </summary>
+        <div class="bio"><strong>Perfil:</strong> Contador Público Autorizado con maestría en Contabilidad Tributaria. Consultor financiero y tributario desde 2012, catedrático de Ciencias Económicas y Sociales en UCNE y facilitador de INFOTEP. Complementa su experiencia con formación en Industria 4.0, cloud computing, transformación digital y estudios de Ingeniería en Software.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="register" id="registro">
+  <div class="container">
+    <div class="regbox">
+      <div class="reghead">
+        <div><h2>Reserva tu cupo</h2><p>Completa el formulario de inscripción.</p></div>
+        <a class="btn btn-yellow" href="https://forms.gle/cP5a7XXPwa6Ktq9cA" target="_blank" rel="noopener">Abrir formulario ↗</a>
+      </div>
+      <div class="frame">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScN_uqKrleA0U0jxMsWrWZ-KCZcgAeRsjQIhpHeBYKTUueLsw/viewform?embedded=true" loading="lazy" title="Formulario de inscripción">Cargando…</iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/logo-score-credy.png" alt="Score Credy">
+  <div>IA, Finanzas y Estrategia · El Nuevo Juego Empresarial</div>
+</footer>
+
+<div class="floating"><a class="btn btn-yellow" href="https://forms.gle/cP5a7XXPwa6Ktq9cA" target="_blank" rel="noopener">Reservar mi cupo ↗</a></div>
+</body>
+</html>
